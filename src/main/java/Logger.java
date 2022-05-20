@@ -1,3 +1,6 @@
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class Logger {
     protected int num = 1;
     private static Logger logger;
@@ -10,7 +13,8 @@ public class Logger {
     }
 
     public void log(String msg) {
-        System.out.println("[" + System.currentTimeMillis() +"№"+ num++ + "] " + msg);
+
+        System.out.println("[" + LocalDateTime.now() +"   № "+ num++ + "] " + msg);//неоптимальный момент
         num++;
     }
 
